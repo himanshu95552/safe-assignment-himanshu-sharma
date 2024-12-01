@@ -40,6 +40,7 @@ Name: Himanshu Sharma
 
 	7. Top_K_Analysis_Result.png 
 		-- Analysis Result Image for reference.
+  		-- This covers result of task requirement 4.a. and 4.b.
 
 
 ## Prerequisites
