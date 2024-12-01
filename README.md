@@ -42,7 +42,7 @@ Name: Himanshu Sharma
 		-- Analysis Result Image for reference.
 
 
-## Prerequsites
+## Prerequisites
 	1. Python 3.9 or later
 	2. Dependencies: Ensure you include packages like pandas, pyarrow, and dune-client
 	3. config.json file
@@ -65,7 +65,7 @@ Name: Himanshu Sharma
 			unique_safes_by_week_protocol.parquet
 
 
-## Methodology followed
+## Methodology Followed
 	1. Separation of Stages
 		-- Scripts are separated based on their functioning: Extraction, Transformation, and Analysis
 
@@ -89,7 +89,7 @@ Name: Himanshu Sharma
       		-- Structured and formatted code.
 
 
-## Process Enhancement Recommendations (These are based on assumptions)
+## Process Enhancement / Recommendations (These are based on assumptions)
 	1. Orchestration
 		-- Use of Airflow / Dagster DAGs to orchestrate workflow.
 
