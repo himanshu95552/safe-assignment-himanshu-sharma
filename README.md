@@ -83,6 +83,11 @@ Name: Himanshu Sharma
 
 	6. Parameterization wherever possible 
 
+ 	7. SQL Code Optimization
+  		-- Only built limited / required fields
+    		-- Ensured Aliasing in code for better debugging in future.
+      		-- Structured and formatted code.
+
 
 ## Process Enhancement Recommendations (These are based on assumptions)
 	1. Orchestration
