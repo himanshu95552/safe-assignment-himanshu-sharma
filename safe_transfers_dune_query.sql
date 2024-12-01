@@ -18,7 +18,7 @@ WITH safe_transfers AS -- Extracts raw transfer data for Safes from the Ethereum
     AND transfers."from" IN (SELECT safes.address from safe_ethereum.safes safes) 
     AND transfers.amount_usd > 0
     -- AND transfers.block_number > {{min_block}} - 12 -- For incremental load.
-)
+     )
 , receiver_labels AS -- Adds metadata to receiver address (labels, categories, contract_names)
 (   SELECT 
      transfers.blockchain
@@ -42,8 +42,7 @@ WITH safe_transfers AS -- Extracts raw transfer data for Safes from the Ethereum
             OR la.model_name IN ('dex_pools', 'dao_framework', 'mev', 'flashbots')
             )
     GROUP BY 1, 2
-)
-
+     )
 , labelled_transfers AS 
 (   SELECT
     transfers.blockchain
@@ -83,7 +82,6 @@ WITH safe_transfers AS -- Extracts raw transfer data for Safes from the Ethereum
     LEFT JOIN receiver_labels label ON transfers.to = label.address
     WHERE transfers.amount_usd IS NOT NULL
     )
-
 , labelled_transfers_with_vertical AS 
 (   SELECT
      transfers.*
@@ -121,7 +119,6 @@ WITH safe_transfers AS -- Extracts raw transfer data for Safes from the Ethereum
         END AS vertical
     FROM labelled_transfers transfers
     )
-
 , labelled_transfers_with_vertical_and_protocol AS 
 (   SELECT
      transfers.*
@@ -129,4 +126,4 @@ WITH safe_transfers AS -- Extracts raw transfer data for Safes from the Ethereum
     FROM labelled_transfers_with_vertical transfers
     )
 
-SELECT * FROM labelled_transfers_with_vertical_and_protocol
+SELECT transfers.* FROM labelled_transfers_with_vertical_and_protocol transfers
