@@ -19,10 +19,14 @@ Name: Himanshu Sharma
 	4. dune__transform_transactions.py
 		-- Script to Transform extracted raw data.
 		-- Saves following summarized data as parquet files
-			5a. tvp_by_week_vertical_and_safe.parquet: Weekly TVP data by vertical and Safe.
+			5a. tvp_by_week_vertical_and_safe.parquet: Weekly TVP & Transactions data by vertical and Safe.
+   				-- This covers assignment Task 2.b.ii. and 2.b.iii. (The total number of transactions aggregated per Safe per week and Outgoing TVP in USD aggregated per Safe per week. )
 			5b. unique_safes_by_week_vertical.parquet: Unique Safes per vertical per week.
-			5c. tvp_by_week_protocol_and_safe.parquet: Weekly TVP data by protocol and Safe.
+   				-- This covers assignment Task 2.b.i (Unique Safes)
+			5c. tvp_by_week_protocol_and_safe.parquet: Weekly TVP & Transactions data by protocol and Safe.
+   				-- This covers assignment Task 2.c.ii. and 2.c.iii. (The total number of transactions aggregated per Safe per week and Outgoing TVP in USD aggregated per Safe per week. )
 			5d. unique_safes_by_week_protocol.parquet: Unique Safes per protocol per week.
+   				-- This covers assignment Task 2.c.i (Unique Safes)
 
 	5. dune__analyze_transactions.py
 		-- Script uses transformed data and prints following analysis:
